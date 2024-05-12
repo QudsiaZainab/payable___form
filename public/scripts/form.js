@@ -38,7 +38,7 @@ var totalAmountInput = document.getElementById("total-amount");
 finalFeesInput.addEventListener("keydown", function () {
 
     // finalVatInput.value = "NaN";
-    finalTotalAmountInput.value = "NaN";
+    // finalTotalAmountInput.value = "NaN";
 
     var initialFees = parseFloat(initialFeesInput.value) || 0;
     var finalFees = parseFloat(finalFeesInput.value) || 0;
@@ -85,10 +85,40 @@ function updateTotalFees() {
     var totalFees = initialFees + finalFees;
     initialTotalAmountInput.value = initialFees;
     totalFeesInput.value = totalFees.toFixed(2);
+
+    var initialTotalA = parseFloat(initialTotalAmountInput.value) || 0;
+    var finalTotalA = parseFloat(finalTotalAmountInput.value) || 0;
+    var totalA = initialTotalA + finalTotalA;
+    totalAmountInput.value = totalA.toFixed(2);
 }
 
 // Add event listener to initial fees input field for input event
 initialFeesInput.addEventListener("input", updateTotalFees);
+
+
+function updateTotalAmount(){
+    var initialTotalA = parseFloat(initialTotalAmountInput.value) || 0;
+    var finalTotalA = parseFloat(finalTotalAmountInput.value) || 0;
+    var totalA = initialTotalA + finalTotalA;
+    totalAmountInput.value = totalA.toFixed(2);
+}
+
+initialTotalAmountInput.addEventListener("input", updateTotalAmount)
+
+var vvt = document.getElementById('VAT');
+var ccf = document.getElementById('f-courseFee');
+
+function updateGrandTotal(){
+    var totalCF = parseFloat(document.getElementById('f-courseFee').value) || 0;
+    var vt = parseFloat(document.getElementById('VAT').value) || 0;
+    var gt = totalCF + vt/100;
+    var grt = document.getElementById('f-grandTotal');
+    
+    grt.value = gt.toFixed(2);
+}
+
+vvt.addEventListener("input", updateGrandTotal);
+ccf.addEventListener("input", updateGrandTotal);
 
 
 const button = document.getElementById('btn');
@@ -119,9 +149,10 @@ button.addEventListener('click', function () {
     var grandTotal = document.getElementById('f-grandTotal').value;
     var courseFee = document.getElementById('f-courseFee').value;
 
-    if (fname === "" || fprogram === "" || fspecialization === "" || VAT === "" || date === null || source === "" || initialDate === null || initialFees === "" || initialTotalAmount === "" || finalDate === null || finalFees === ""  || finalTotalAmount === "" || totalFees === ""  || totalTotalAmount === "" || monthlyPayment === "" || payable === "" || paymentDuration === "" || studentSignature === "" || agcSignature === "" || grandTotal === "" || courseFee === "") {
+
+    if (fname === "" || fprogram === "" || fspecialization === "" || VAT === "" || date === null || source === "" || initialDate === "" || initialFees === "" || initialTotalAmount === "" || finalDate === null || finalFees === ""  || finalTotalAmount === "" || totalFees === ""  || totalTotalAmount === "" || monthlyPayment === "" || payable === "" || paymentDuration === "" || studentSignature === "" || agcSignature === "" || grandTotal === "" || courseFee === "") {
         event.preventDefault(); // Form submission ko rokne ke liye
-        alert('Please fill out this form'); // Message display karen
+        alert('Please fill out this form'); 
     } else {
         const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");

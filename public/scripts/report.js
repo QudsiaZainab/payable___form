@@ -6,6 +6,8 @@ fetch("http://localhost:3000/api/get")
         document.getElementById('r-program').value = result.response[result.response.length - 1].program;
         document.getElementById('r-specialization').value = result.response[result.response.length - 1].specialization;
         // document.getElementById('r-VAT').value = result.response[result.response.length - 1].vat;
+        document.getElementById('r-VAT').value = result.response[result.response.length - 1].vat;
+
         let dateString = result.response[result.response.length - 1].date;
         console.log('Date String:', dateString);
 
