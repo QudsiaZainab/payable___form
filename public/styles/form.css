@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+#top {
+    display: flex;
+    align-items: flex-end;
+}
+
+#top-start {
+    border: 1px solid black;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40rem;
+}
+
+#top-start img {
+    width: 5rem;
+    margin: 0;
+}
+
+#top-start h5 {
+    text-align: center;
+    margin-top: 0.2rem;
+}
+
+#top-middle h3 {
+    font-weight: bold;
+    color: rgb(5, 5, 129);
+    width: 20rem;
+    text-align: center;
+}
+
+#top-middle {
+    margin: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#top-middle-below {
+    padding: 1rem;
+    border: 1px solid black;
+    font-size: 0.7rem;
+    color: purple;
+    text-align: center;
+    font-style: italic;
+}
+
+#top-right {
+    width: 40rem;
+    height: 100%;
+    align-self: center;
+}
+
+#top-right img {
+    width: 2rem;
+}
+
+#top-right p {
+    font-size: 0.6rem;
+    font-style: italic;
+}
+
+#tagline {
+    margin-top: 0.5rem;
+    font-size: 0.6rem;
+    font-style: italic;
+    color: purple;
+    text-align: center;
+}
+
+#tagline span {
+    color: rgb(173, 168, 168);
+}
+
+#tagline-heading {
+    text-align: center;
+    color: rgb(5, 5, 129);
+    margin: 0.1rem 0;
+}
+
+.tagline-heading-description {
+    text-align: center;
+    font-size: 0.6rem;
+    font-style: italic;
+}
+
+#information {
+    display: flex;
+    margin-top: 0.5rem;
+    align-items: flex-end;
+}
+
+#information-right {
+    width: 20%;
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+#information-right p {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+form {
+    width: 80%;
+}
+
+
+label {
+    font-weight: bold;
+    font-size: 0.7rem;
+    margin-right: 0.5rem;
+}
+
+input {
+    background-color: rgb(236, 245, 255);
+    border: transparent;
+    margin-right: 0.5rem;
+}
+
+.information-check-input {
+    display: flex;
+    margin-top: 0.5rem;
+    align-items: center;
+}
+
+.information-check-input input {
+    margin-right: 0.5rem;
+}
+
+input:focus {
+    background-color: white;
+    padding-left: 0.2rem;
+    border-style: dotted;
+    border-spacing: 15px;
+}
+
+.row {
+    /* margin-top: 0.1rem; */
+    display: flex;
+    align-items: center;
+}
+
+table {
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid black;
+    padding: 0 1rem;
+}
+
+td {
+    border: 1px solid black;
+    padding: 0 1rem;
+}
+
+thead {
+    background-color: rgb(212, 212, 231);
+}
+
+.td-heading {
+    padding: 0 3rem;
+    text-align: center;
+    background-color: rgb(216, 236, 255);
+}
+
+td input {
+    margin: 0.2rem 0;
+}
+
+.diagonal {
+    background:
+        linear-gradient(to top left,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0) calc(50% - 0.8px),
+            rgba(0, 0, 0, 1) 50%,
+            rgba(0, 0, 0, 0) calc(50% + 0.8px),
+            rgba(0, 0, 0, 0) 100%),
+        linear-gradient(to top right,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0) calc(50% - 0.8px),
+            rgba(0, 0, 0, 1) 50%,
+            rgba(0, 0, 0, 0) calc(50% + 0.8px),
+            rgba(0, 0, 0, 0) 100%);
+}
+
+#page-1-footer-div {
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    padding-top: 0.2rem;
+    padding-right: 0.5rem;
+    border-top: 1px solid black;
+    width: fit-content;
+}
+
+.border-top {
+    border-top: 2px solid black;
+}
+
+.border-side {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.border-bottom {
+    border-bottom: 2px solid black;
+}
+
+.highlighted-row {
+    background-color: rgb(197, 229, 255);
+}
+
+#table2 tr th input {
+    border: none;
+    background-color: rgb(226, 226, 254);
+}
+
+#tables-below {
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+#conforment-div {
+    padding: 0.5rem;
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    border: 1px solid black;
+}
+
+#conforment-tagline {
+    font-style: italic;
+    font-weight: bold;
+}
+
+#conforment-inputs {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+
+
+#conforment-row{
+    display: flex;
+    margin-top: 0.2rem;
+}
+
+#conforment-row input{
+    width: 150rem;
+}
+ 
+#application-div{
+    padding: 1rem;
+    border: 1px solid black;
+    margin-top: 1rem;
+    font-size: 0.6rem;
+}
+
+
+
+.bold-label{
+    margin-left: 0.5rem;
+}
+
+.bold-input{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.2rem;
+}
+
+.bold-input label{
+    font-weight: bold;
+}
+
+#euro-div{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#nous1{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#nous2{
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 0.1rem;
+}
+
+#arretons{
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 3rem;
+}
+
+#arretons div{
+    display: flex;
+    justify-content: space-between;
+}
+
+#ving{
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+#nombre{
+    font-weight: normal;
+    font-size: 0.7rem;
+}
+
+#footer-div{
+    font-size: 0.5rem;
+    margin-top: 0.3rem;
+}
+
+#options1 {
+    max-height: 100px; /* Set maximum height for the dropdown */
+    overflow-y: auto; /* Enable vertical scrollbar if needed */
+  }

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/report.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="pdf-content">
+        <header>
+            <img src="images/IMG_2713.JPG" alt="" style="height: 8vh;">
+            <img src="images/Screenshot 2024-05-11 051800.png" alt="">
+        </header>
+        <form method="post">
+            <div class="row">
+                <div class="input-field">
+                    <label for="r-name">Name:</label>
+                    <input type="text" id = "r-name" required>
+                </div>
+                <div class="input-field">
+                    <label for="r-program">Program:</label>
+                    <input type="text" id = "r-program" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="inputfield-row2">
+                    <label for="r-specialization">Specialization:</label>
+                    <input type="text" id = "r-specialization">
+                </div>
+                <div class="inputfield-row2">
+                    <label for="r-date-input1">Date:</label>
+                    <input type="date" id = "r-date-input1" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field">
+                    <label for="r-source" style = "margin-bottom: 3rem;">University</label>
+                    <input type="text" id = "r-source" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field">
+                    <label for="Source">Total Course Fee:</label>
+                    <input type="text" required id="r-courseFee">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field">
+                    <label for="VAT">VAT:</label>
+                    <select id="VAT" name="VAT" required>
+                        <option value="">--Choose--</option>
+                        <option value="v0">0</option>
+                        <option value="v5">5</option>
+                        <option value="v10">10</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field">
+                    <label for="Source">Grand Total:</label>
+                    <input type="text" required id="r-grandTotal">
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <th></th>
+                    <th>Due Date</th>
+                    <th>Fees</th>
+                    <th>Total Amount</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Initial Registration</td>
+                        <td><input type="date" id = "r-date" required></td>
+                        <td>BHD<input type="text" id = "r-initial-fees" required></td>
+                        <td>BHD<input type="text" id = "r-initial-totalAmount" required></td>
+                    </tr>
+                    <tr class="bold-text">
+                        <td>Final Registration</td>
+                        <td><input type = "date" id = "r-final-date"></td>
+                        <td>BHD<input type="text" id = "r-finalFees-input" value = "500" readonly></td>
+                        <td>BHD<input type="text" id = "r-finalTotalAmount-input" required></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>TOTAL</th>
+                        <th></th>
+                        <th><input id = "r-total-fees" type="text" required></th>
+                        <th>BHD<input type="text" id = "r-total-amount" required></th>
+                    </tr>
+                </tfoot>
+            </table>
+            <div id="dotted-box">
+                <div class="row">
+                    <div class="input-field">
+                        <label for="r-monthly-payment">Your monthly payment</label>
+                        <input type="text" id = "r-monthly-payment" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="r-payable">which is payable on every</label>
+                        <input type="text" id = "r-payable" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <label for="r-payment-duration" >Duration of Payment</label>
+                        <input type="text" id = "r-payment-duration" required>
+                    </div>
+                </div>
+                <div id="signature-row">
+                    <div id="student-signature" class="signature-div">
+                        <input id = "r-student-signature" type="text" required>
+                        <div class="label-div">
+                            <label for="student-signature">Student Signature</label>
+                        </div>
+                    </div>
+                    <div id="loc-signature" class="signature-div">
+                        <input type="text" id = "r-agc-signature" required>
+                        <div class="label-div">
+                            <label for="student-signature">For and behalf of AGC</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src = "scripts/report.js"></script>
+</body>
+
+</html>
