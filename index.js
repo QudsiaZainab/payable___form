@@ -5,8 +5,7 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
 
-mongoose.connect('mongodb://localhost:27017/payable_form', {useNewUrlParser: true, useUnifiedTopology: true});
-
+mongoose.connect('mongodb+srv://qudsia:afazaiaN%40123@cluster0.1dqdgtg.mongodb.net/payable_form', {useNewUrlParser: true, useUnifiedTopology: true});
 const db = mongoose.connection;
 
 db.on("error", (err)=>{
