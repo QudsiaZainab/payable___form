@@ -1,31 +1,31 @@
+// Load environment variables from .env file
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
-
-mongoose.connect('mongodb+srv://qudsia:afazaiaN%40123@cluster0.1dqdgtg.mongodb.net/payable_form', {useNewUrlParser: true, useUnifiedTopology: true});
+// MongoDB connection
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 
-db.on("error", (err)=>{
-    console.log(err);
-})
+db.on("error", (err) => {
+    console.error("MongoDB connection error:", err);
+});
 
-db.once("open",()=>{
-    console.log("db connected");
-})
+db.once("open", () => {
+    console.log("MongoDB connected successfully");
+});
 
+// Middleware
 app.use(morgan('dev'));
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.json())
-
-
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // Import routes
 const userRoute = require('./routes/useRoute');
-
-// Import controllers
 const formRoute = require('./routes/form');
 
 // Set up view engine and static files
@@ -35,7 +35,7 @@ app.use(express.static('public'));
 
 // Use routes
 app.use('/users', userRoute);
-app.use('/api',formRoute);
+app.use('/api', formRoute);
 
 // Start the server
 const PORT = process.env.PORT || 3000;
