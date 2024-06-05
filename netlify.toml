@@ -1,4 +1,4 @@
 [build]
-  base = "server"
+  base = "/payable__form"
   command = "npm install && npm start"
   publish = "public"
