@@ -12,8 +12,7 @@ const mongooseOptions = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   tls: true, // Enable TLS encryption
-  tlsAllowInvalidHostnames: true, // Allow invalid hostnames (e.g., self-signed certificates)
-  tlsInsecure: true // Allow connections without strict TLS validation
+  tlsAllowInvalidHostnames: true // Allow invalid hostnames (e.g., self-signed certificates)
 };
 
 mongoose.connect(process.env.MONGODB_URI, mongooseOptions)
