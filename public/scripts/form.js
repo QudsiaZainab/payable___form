@@ -207,7 +207,7 @@ button.addEventListener('click', function () {
             });
 
 
-        window.open('/users/report_generate');
+        window.open('/report_generate');
     }
 
 

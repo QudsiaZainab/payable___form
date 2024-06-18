@@ -104,7 +104,7 @@ const generateReport = async (req, res) => {
         const page = await browser.newPage();
 
         // Wait for the page to load completely before proceeding
-        await page.goto(`${req.protocol}://${req.get('host')}/users/report`, {
+        await page.goto(`${req.protocol}://${req.get('host')}/report`, {
             waitUntil: 'networkidle2'
         });
 

@@ -38,7 +38,7 @@ app.set('views', './views');
 app.use(express.static('public'));
 
 // Use routes
-app.use('/users', userRoute);
+app.use('/', userRoute);
 app.use('/api', formRoute);
 
 // Start the server
